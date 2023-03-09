@@ -100,7 +100,7 @@ footer{
 }
 
 #main {
-    margin-left: 270px;
+    margin-left: 265px;
 }
 
 /* Inicio */
@@ -111,6 +111,7 @@ section#inicio{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    transition: 0.3s linear;
 
     width: 100%;
     height: 100vh;
@@ -126,7 +127,7 @@ section#inicio span#subtitle {
     font-size: 1.5rem;
 }
 
-#text-sahdow{
+.text-shadow{
     text-shadow: 4px 4px 10px #101014;
 }
 
@@ -144,4 +145,56 @@ section#inicio div#arraste a{
 
 section#inicio div#arraste a:hover{
     color: #50e6ff;
+}
+
+i.menu-mobile {
+    position: fixed;
+    color: #50e6ff;
+    background-color: transparent;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.7rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-nav-active {
+    overflow: hidden;
+}
+
+.menu-nav-active #header {
+    left: 0;
+}
+
+
+
+@media (max-width: 1420px) {
+    #header {
+        left: -300px;
+    }
+
+    i.menu-mobile {
+        display: flex;
+    }
+    section#inicio h2 {
+        margin-left: 27px;
+        font-size: 3.5rem;
+    }
+
+    section#inicio span#subtitle {
+        margin-right: 0;
+        font-size: 1rem;
+
+    }
+
+    #main {
+        margin-left: 0;
+    }
+
 }
